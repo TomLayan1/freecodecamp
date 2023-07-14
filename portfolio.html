@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- for header and navbar -->
+        <nav id="navbar" class="nav">
+          <a class="nav-list" href="#welcome-section">About</a>
+          <a class="nav-list" href="#projects">Project</a>
+          <a class="nav-list" href="#contact">Contact</a>
+        </nav>
+
+      <!--for welcome section-->
+      <div id="welcome-section">
+        <h1>Hey I am David</h1>
+        <p>I am a <span>web developer</span></p>
+      </div>
+
+      <!--for project-->
+      <project-tile id="projects">
+        <h2 class="my-work">My <span>Work</span></h2>
+        <div class="project-info">
+          <div class="project-tile">
+            <a href="http://127.0.0.1:5501/freecodecamp/mandela.html>"><img id="project-img" src="freecodecamp/mandela.png"></a>
+            <p class="name">Tribute Page</p>
+          </div>
+          <div class="project-tile">
+            <a href="http://127.0.0.1:5501/freecodecamp/survey.html"><img id="project-img" src="freecodecamp/survey.png"></a>
+            <p class="name">Survay Form</p>
+          </div>
+        </div>
+      </project-tile>
+      
+      <!--for contact-->
+      <div id="contact">
+        <h1 class="work">Let's work together...</h1>
+          <p class="work"><a id="profile-link" href="#" target="_blank">Github</a></p>
+      </div>
+    </main>
+  </body>
+</html>
