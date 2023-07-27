@@ -1,0 +1,304 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Ubuntu', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.main{
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid grey;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.navigation{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.menu-icon{
+  width: 20px;
+  cursor: pointer;
+}
+
+nav{
+  flex: 1;
+  text-align: right;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li a:hover{
+  color: grey;
+}
+
+/*For home*/
+#home{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  
+  padding: 0px 30px 0px 30px;
+  border-radius: 1px solid black;
+}
+
+.col-1{
+  position: relative;
+  padding-left: 40px;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: 200px;
+  line-height: 40px;
+}
+
+h4{
+  margin-top: 10px;
+}
+
+.price{
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+button{
+  padding: 10px 25px 10px 25px;
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+button:hover{
+  margin-left: 5px;
+}
+
+.social-media{
+  margin-top: 20px;
+}
+.social{
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 50px;
+  padding: 2px;
+  margin-right: 10px;
+  transition: 0.3s;
+  color: black;
+}
+
+.social:hover{
+  background-color: black;
+  color: white;
+}
+
+.col-1::after{
+  content: '';
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  left: 15px;
+  top: 8px;
+}
+
+.col-2{
+  display: flex;
+  align-items: center;
+}
+
+.bx-cart-add{
+  font-size: 30px;
+}
+
+.watch{
+  width: 80%;
+  margin-left: 40px;
+}
+
+
+#store{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px){
+  .main{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .navigation{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo{
+    cursor: pointer;
+  }
+  
+  .menu-icon{
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  nav ul{
+    width: 100px;
+    background-color: grey;
+    position: absolute;
+    top: 75px;
+    z-index: -3;
+  }
+  nav ul li{
+    display: block;
+    list-style: none;
+    margin-right: 30px;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  nav ul li a:hover{
+    color: grey;
+  }
+  
+  /*For home*/
+  #home{
+    width: 100%;
+    height: 100vh;
+    justify-content: safe;
+    flex-direction: column-reverse;
+    border-radius: 1px solid black;
+  }
+  
+  .col-1{
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  h2{
+    font-size: 30px;
+    font-weight: 200px;
+    line-height: 40px;
+  }
+  
+  h4{
+    margin-top: 10px;
+  }
+  
+  .price{
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  
+  button{
+    padding: 10px 25px 10px 25px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: 0.3s;
+  }
+  
+  button:hover{
+    margin-left: 5px;
+  }
+  
+  .social-media{
+    margin-top: 20px;
+  }
+
+  .social{
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 2px;
+    margin-right: 10px;
+    transition: 0.3s;
+    color: black;
+  }
+  
+  .social:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 15px;
+    top: 8px;
+  }
+  
+  
+  .watch{
+    width: 50%;
+  }
+  
+  .col-2{
+    top: 0;
+    height: auto;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(45deg, black, rgb(48, 48, 48), grey);
+    width: 70%;
+    height: 99%;
+    z-index: -1;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
