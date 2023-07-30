@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+</head>
+<body>
+  <p>Cart quantity</p>
+  <select id="cartQuantity1">
+    <option disabled="true" selected="true">Quantity</option>
+    <option onclick="cartQuantity1 = 1; console.log(`Cart quantity1: ${cartQuantity1}`)">1</option>
+    <option onclick="cartQuantity1 = 2; console.log(`Cart quantity1: ${cartQuantity1}`)">2</option>
+    <option onclick="cartQuantity1 = 3; console.log(`Cart quantity1: ${cartQuantity1}`)">3</option>
+    <option onclick="cartQuantity1 = 4; console.log(`Cart quantity1: ${cartQuantity1}`)">4</option>
+    <option onclick="cartQuantity1 = 5; console.log(`Cart quantity1: ${cartQuantity1}`)">5</option>
+    <option onclick="cartQuantity1 = 6; console.log(`Cart quantity1: ${cartQuantity1}`)">6</option>
+    <option onclick="cartQuantity1 = 7; console.log(`Cart quantity1: ${cartQuantity1}`)">7</option>
+    <option onclick="cartQuantity1 = 8; console.log(`Cart quantity1: ${cartQuantity1}`)">8</option>
+    <option onclick="cartQuantity1 = 9; console.log(`Cart quantity1: ${cartQuantity1}`)">9</option>
+    <option onclick="cartQuantity1 = 10; console.log(`Cart quantity1: ${cartQuantity1}`)">10</option>
+  </select>
+
+  <select id="cartQuantity2">
+    <option disabled="true" selected="true">Quantity</option>
+    <option onclick="cartQuantity2 = 1; console.log(`Cart quantity2: ${cartQuantity2}`)">1</option>
+    <option onclick="cartQuantity2 = 2; console.log(`Cart quantity2: ${cartQuantity2}`)">2</option>
+    <option onclick="cartQuantity2 = 3; console.log(`Cart quantity2: ${cartQuantity2}`)">3</option>
+    <option onclick="cartQuantity2 = 4; console.log(`Cart quantity2: ${cartQuantity2}`)">4</option>
+    <option onclick="cartQuantity2 = 5; console.log(`Cart quantity2: ${cartQuantity2}`)">5</option>
+    <option onclick="cartQuantity2 = 6; console.log(`Cart quantity2: ${cartQuantity2}`)">6</option>
+    <option onclick="cartQuantity2 = 7; console.log(`Cart quantity2: ${cartQuantity2}`)">7</option>
+    <option onclick="cartQuantity2 = 8; console.log(`Cart quantity2: ${cartQuantity2}`)">8</option>
+    <option onclick="cartQuantity2 = 9; console.log(`Cart quantity2: ${cartQuantity2}`)">9</option>
+    <option onclick="cartQuantity2 = 10; console.log(`Cart quantity2: ${cartQuantity2}`)">10</option>
+  </select>
+
+  <button onclick="
+    let totalQuantity = cartQuantity1 + cartQuantity2;
+    if(totalQuantity > 10){
+        alert('Error. Maximum cart quantity exceeded');
+      }
+      else{
+        alert(`Total quantity: ${totalQuantity}`);
+      }
+    ">Buy</button>
+  <script>
+    let cartQauntity1 = '';
+    let cartQauntity2 = '';
+  </script>
+</body>
+</html>
