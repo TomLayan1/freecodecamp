@@ -7,14 +7,21 @@
 </head>
 <body>
   <script>
-   const product = {
-    name: 'basketball',
-    price: 2095
-   };
-   console.log(product);
+  const product1 = {
+    name: 'shirt',
+    price: 2405
+  };
 
-   product.price = 2595;
-   console.log(product);
+  const product2 = {
+    name: 'trouser',
+    price: 3296
+  };
+
+  function isTheSameProduct(product1, product2){
+    console.log(product1 === product2);
+  }
+
+  isTheSameProduct(product1, product2)
   </script>
 </body>
 </html>
