@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Calculator</title>
+</head>
+<body>
+  <p>Shipping calculator</p>
+  <p>Order below $40 = +$10 shipping.</p>
+  <p>Order above $40 = FREE shipping.</p>
+  <input class="costInput" placeholder="Cost of order">
+  <button class="calculateAmount" onclick="calculateShippingAmount()">Calculate</button>
+  <p class="result"></p>
+  <script>
+    function calculateShippingAmount() {
+      let costInput = document.querySelector('.costInput');
+      let cost = costInput.value;
+
+      if (cost < 40){
+        console.log(cost = ((cost * 100) + 1000) / 100);
+      }
+
+      document.querySelector('.result').innerHTML = `Cost of shipping is $${cost}`;
+    }
+  </script>
+</body>
+</html>
