@@ -16,7 +16,15 @@
   <button onclick="playGame('scissors')">Scissors
   </button>
 
-  <button onclick=" score.wins = 0; score.loses = 0; score.ties = 0; localStorage.removeItem('score')">Reset Score</button>
+
+  <p class="moves"></p>
+  <p class="result"></p>
+  <p class="scores">Wins: 0, Loses: 0, Ties: 0</p>
+
+
+  <button onclick=" score.wins = 0; score.loses = 0; score.ties = 0; localStorage.removeItem('score')
+  updateScoreBoard()">Reset Score</button>
+
   <script>
     let  score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
@@ -24,6 +32,9 @@
       ties: 0
     };
 
+    let scoreBoard = document.querySelector('.scores').innerHTML = `Wins: ${score.wins}. Loses: ${score.loses}. Ties: ${score.ties}`;
+
+    // to get player move, result  and score 
     function playGame(playerMove){
       const computerMove = pickComputerMove();
     
@@ -75,10 +86,14 @@
 
       localStorage.setItem('score', JSON.stringify(score));
 
-      alert(`You picked ${playerMove}. Computerpicked ${computerMove}. You ${result}.
-Wins: ${score.wins}. Loses: ${score.loses}. Ties: ${score.ties}`);
+      document.querySelector('.moves').innerHTML = `You picked ${playerMove}. Computerpicked ${computerMove}.`;
+
+      document.querySelector('.result').innerHTML = `You ${result}.`;
+
+      updateScoreBoard('');
     }
 
+    // for getting random computer move
     function pickComputerMove() {
       const randomNumber = Math.random();
 
@@ -95,6 +110,12 @@ Wins: ${score.wins}. Loses: ${score.loses}. Ties: ${score.ties}`);
       }
       
       return computerMove;
+    }
+
+
+    // for score
+    function updateScoreBoard() {
+      let scoreBoard = document.querySelector('.scores').innerHTML = `Wins: ${score.wins}. Loses: ${score.loses}. Ties: ${score.ties}`;
     }
   </script>
 </body>
