@@ -13,14 +13,18 @@
   <button class="calculateAmount" onclick="calculateShippingAmount()">Calculate</button>
   <p class="result"></p>
   <script>
+    // the function calculates the cost when the button is clicked
     function calculateShippingAmount() {
       let costInput = document.querySelector('.costInput');
+      // costInput.value to get the value from the input box
       let cost = costInput.value;
 
+      // checks if the inputed value is below or above $40 and add $10 when applicable
       if (cost < 40){
         console.log(cost = ((cost * 100) + 1000) / 100);
       }
 
+      // prints the calculated amount to the screen
       document.querySelector('.result').innerHTML = `Cost of shipping is $${cost}`;
     }
   </script>

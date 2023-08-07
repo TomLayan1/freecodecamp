@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Calculator</title>
+  <style>
+    body{
+      padding: 0;
+      margin: 0;
+    }
+    #screen{
+      background-color: grey;
+      color: white;
+      text-align: right;
+      padding: 3px;
+      width: 98%;
+      height: 70px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+    .calculator-container{
+      width: 400px;
+      min-height: 50vh;
+      position: relative;
+      padding: 20px 30px;
+    }
+
+    button{
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 24px;
+    }
+
+    button:hover{
+      background-color: grey;
+    }
+
+    .symbol {
+      color: green;
+      font-size: 24px;
+    }
+
+    .div1, .div2, .div3, .div4{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .equal-container2{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .div5{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .equal {
+      background-color: green;
+      position: absolute;
+      padding: 43px 35px;
+      right: 30px;
+      bottom: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="calculator-container">
+    <div id="screen">
+      <p class="answer"></p>
+      <p class="inputs"></p>
+    </div>
+    <div class="div1">
+      <button class="symbol" onclick="calculateNumber ('c')">C</button>
+
+      <button class="symbol" onclick = "pickNumber(' / ')">/</button>
+
+      <button class="symbol" onclick = "pickNumber(' * ')">X</button>
+
+      <button class="symbol" onclick="calculateNumber ('-1')">&larr;<i class='bx bxs-tag-x' ></i></button>
+    </div>
+
+    <div class="div2">
+      <button onclick = "pickNumber('7')">7</button>
+
+      <button onclick = "pickNumber('8')">8</button>
+
+      <button onclick = "pickNumber('9')">9</button>
+
+      <button class="symbol" onclick = "pickNumber(' - ')">-</button>
+    </div>
+    <div class="div3">
+      <button onclick = "pickNumber('4')">4</button>
+
+      <button onclick = "pickNumber('5')">5</button>
+
+      <button onclick = "pickNumber('6')">6</button>
+
+      <button class="symbol" onclick = "pickNumber(' + ')">+</button>
+    </div>
+
+    <div class="subcontainer">
+      <div class="container1">
+        <div class="div4">
+          <button onclick = "pickNumber('1')">1</button>
+
+          <button onclick = "pickNumber('2')">2</button>
+
+          <button onclick = "pickNumber('3')">3</button>
+        </div>
+        <div class="div5">
+          <button onclick = "calculateNumber('%')">%</button>
+          <button onclick = "pickNumber('0')">0</button>
+          <button onclick = "pickNumber('.')">.</button>
+        </div>
+        <button class="equal" onclick="calculateNumber ('=')">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // answer(=) is undefined and calculation (numbers) is defined as empty string so that the numbers will concartinate.
+    let answer;
+    let calculation = '';
+
+    // to pick numbers.
+    function pickNumber(number) {
+      calculation += number;
+      document.querySelector('.inputs').innerHTML = calculation;
+    }
+
+    function calculateNumber (symbol) {
+      if(symbol === '='){
+        // to convert the strings to actual numbers and arithmetic and evaluate.
+        answer = eval(calculation);
+        document.querySelector('.answer').innerHTML = answer;
+      }
+      else if(symbol === 'c'){
+        // to remove all the number and have an emptystring.
+        calculation = '';
+        document.querySelector('.inputs').innerHTML = calculation;
+      }
+      else if(symbol === '-1'){
+        // to remove the last number from the concatenanted string.
+        calculation = calculation.slice(0, - 1);
+        document.querySelector('.inputs').innerHTML = calculation;
+      }
+      else if (symbol === '%'){
+        // answer comes first before concartinating the % sign because it gives an error of NAN if it is the other way round. 
+        answer = eval(calculation / 100);
+        document.querySelector('.answer').innerHTML = answer;
+        calculation += '%';
+        document.querySelector('.inputs').innerHTML = calculation;
+      }
+    }
+    </script>
+</body>
+</html>
