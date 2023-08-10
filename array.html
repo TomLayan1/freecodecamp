@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array And Loop Exercises</title>
+</head>
+<body>
+  <script>
+  //  Ex 1: Changing the second value in the array
+   const nums = [10, 20 ,30];
+    nums[2] = 99;
+    console.log(nums)
+  
+  // Ex2: Getting the last value of the array
+    function getLastValue(array) {
+      let lastIndex = array.length - 1;
+      return array[lastIndex];
+    }
+
+    console.log(getLastValue([1, 20, 22, 24, 5]));;
+    console.log(getLastValue(['hi', 'hello', 'good']));
+
+  // Ex3: swapping the first and last value
+    function arraySwap(array) {
+      let lastIndex = array.length - 1;
+
+      let lastValue = array[lastIndex];
+      let firstValue = array[0];
+
+      array[0] = lastValue;
+      array[lastIndex] = firstValue;
+
+      return array;
+    }
+    console.log(arraySwap([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+    // Ex4: Looping through the index in multiples of 2
+    for (i = 0; i <= 10; i += 2) {
+      console.log(i);
+    }
+
+    // Ex5: Looping through the index counting down from the highest to the lowest
+      for (let i = 5; i >= 0; i--) {
+        console.log(i);
+      }
+
+    // Ex6: Adding 1 to all values of the array
+      const myArray = [1, 2, 3];
+      let newArray = [];
+
+      for (let i = 0; i < myArray.length; i++) {
+        let nums = myArray[i];
+        newArray.push(nums + 1);
+      }
+      console.log(newArray);
+
+    // Ex7: Function to add 1 to the values of an array
+      function addOne(array) {
+        let result = [];
+        for (let i = 0; i < array.length; i++){
+          let nums = array[i];
+          result.push(nums + 1);
+        }
+        return result;
+      }
+
+    // EX8: Function to add a number to the value of an array
+      function addNum(array,num){
+        let result = [];
+
+        for (let i = 0; i < array.length; i++){
+          let values = array[i];
+          result.push(values + num);
+        }
+        return result;
+      }
+      console.log(addNum([1, 2, 3], 3));
+
+    // Ex9: Add only positive numbers
+      function countPositive(nums){
+        result = [];
+        for (let i = 0; i < nums.length; i++){
+          let value = nums[i];
+          if (value > 0){
+          result++;
+          }
+        }
+        return result;
+      }
+      console.log(countPositive([-1, -2, 4, 5, 6, -5, 2]));
+  </script>
+</body>
+</html>
