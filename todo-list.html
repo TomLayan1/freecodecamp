@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="todo-list.css">
+  <title>todo List</title>
+</head>
+<body>
+  <p>Todo List</p>
+  <div class="input-field-container">
+    <input class="js-input text-field" placeholder="Enter list" onkeydown="enterToAddList(event)">
+    <input type="date" class="js-date date-field">
+    <button class="js-add-btn green-btn" onclick="addTodoList()">Add</button>
+  </div>
+
+  <!-- we use a div because we can't put a paragraph element inside another paragraph element -->
+  <div class="js-output list-container"></div>
+
+  <script src="todo-list-script.js"></script>
+</body>
+</html>
