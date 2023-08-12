@@ -23,7 +23,6 @@ function renderTodo(){
     todoListHTML += html;
 
     if (i === 8){
-      alert('Maximum input field exceeded');
       break;
     }
   }
