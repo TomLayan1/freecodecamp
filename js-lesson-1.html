@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Script Practice</title>
+</head>
+<body>
+  <script>
+    // Javascript Basics
+    // Calculating the price of cart
+
+    // price of item in cents
+    let toaster = 1899;
+    let ball = 2095;
+    let tShirt= 799;
+
+    // shipping and handling fee in cents
+    let deliveryFee = 499;
+    
+    // sum of the price of each items and divided by 100 for the prices to be in actuall dollar
+    let sum = (toaster + ball + tShirt + deliveryFee) / 100;
+
+    // Estimated tax (10%)
+    let estimatedTax = sum * 0.1;
+
+    // sum of prices of items, delivery fee and tax
+    let total = sum + estimatedTax;
+
+    // rounding off the toatal price to 2 decimal place
+    let orderTotal = total.toFixed(2);
+    console.log(orderTotal);
+
+  </script>
+</body>
+</html>
