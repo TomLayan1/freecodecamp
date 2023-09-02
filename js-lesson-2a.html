@@ -9,25 +9,20 @@
 
   <button onclick="console.log(`Cart quantity is: ${cartQuantity}`);">Show Quantity</button>
 
-  <button onclick="cartQuantity++; console.log(`Cart quantity is: ${cartQuantity}`);
-  ">Add to Cart</button>
+  <button onclick="pickQuantity(1)">Add to Cart</button>
 
-  <button onclick="cartQuantity--; console.log(`Cart quantity is: ${cartQuantity}`);">-1</button>
+  <button onclick="pickQuantity(- 1)">Remove from Cart</button>
 
-  <button onclick="cartQuantity += 2; console.log(`Cart quantity is: ${cartQuantity}`);">+2</button>
+  <button onclick="pickQuantity(2)">+2</button>
 
-  <button onclick="cartQuantity -= 2; console.log(`Cart quantity is: ${cartQuantity}`);">-2</button>
+  <button onclick="pickQuantity(3)">3</button>
 
-  <button onclick="cartQuantity += 3; console.log(`Cart quantity is: ${cartQuantity}`);">+3</button>
+  <button onclick="pickQuantity(4)">4</button>
 
-  <button onclick="cartQuantity -= 3; console.log(`Cart quantity is: ${cartQuantity}`);">-3</button>
+  <button onclick="pickQuantity(5)">5</button>
   
-  <button onclick="cartQuantity = 0; console.log(`Cart quantity is reset. Cart quantity: ${cartQuantity}`);">Reset Cart</button>
+  <button onclick="pickQuantity(0)">Reset Cart</button>
 
-  <script>
-    // Javascript variables
-    // using html buttons to calculate cart quantity
-    let cartQuantity = 0;
-  </script>
+  <script src="js-lesson-2a.js"></script>
 </body>
 </html>
