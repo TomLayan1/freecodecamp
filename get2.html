@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="getech2.css">
+  <title>Document</title>
+</head>
+<body>
+   <!-- header -->
+   <header>
+    <div class="nav-bar-container">
+      <h1 class="logo"><a href="#home">getech</a></h1>
+
+      <nav class="js-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#store">Store</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart-menu-container">
+        <a><img class="cart-icon" src="cart2.png"></a>
+        <p class="js-cart-quantity cart-quantity">0</p>
+        <img class="js-menu menu-icon" src="hamburger.png" onclick="tuggleMenu()">
+      </div>
+    </div>
+  </header>
+
+   <!-- cart items section -->
+   <section class="cart-section">
+    <div class="cart-items-container"></div>
+    <div class="cart-calculator-container">
+      <p class="items-sum"></p>
+      <p class="shipping-fee"></p>
+      <p class="before-tax"></p>
+      <p class="tax-pay">Tax(10%)</p>
+      <h3 class="total-price">Total Price Of Order</h3>
+    </div>
+  </section>
+</body>
+</html>
