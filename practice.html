@@ -8,7 +8,7 @@
 <body>
    
   <script>
-       let product1 = {
+    let product1 = {
     item: 'basketball',
     price: 2095,
     'delivery-time': '3 days'
@@ -19,17 +19,17 @@
     price: 2595,
     'delivery-time': '4 days'
     };
-    
-   function comparePrice(product1, product2){
-    if (product1.price > product2.price){
-      return product2;
+
+   function isSameProduct(product1, product2){
+    if (product1 === product2){
+      return true;
     }
     else{
-      return product1;
+      return false;
     }
    }
 
-    console.log(comparePrice(product1, product2));
+    console.log(isSameProduct(product1, product2));
 
   </script>
 </body>
