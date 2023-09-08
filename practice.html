@@ -6,12 +6,31 @@
   <title>Document</title>
 </head>
 <body>
-    <input type="" class="js-input">
-    <button>Enter</button>
-    <p class="js-message"></p>
-    <p class="js-congrats"></p>
-  <script>
    
+  <script>
+       let product1 = {
+    item: 'basketball',
+    price: 2095,
+    'delivery-time': '3 days'
+    };
+
+    let product2 = {
+    item: 'basketball',
+    price: 2595,
+    'delivery-time': '4 days'
+    };
+    
+   function comparePrice(product1, product2){
+    if (product1.price > product2.price){
+      return product2;
+    }
+    else{
+      return product1;
+    }
+   }
+
+    console.log(comparePrice(product1, product2));
+
   </script>
 </body>
 </html>
