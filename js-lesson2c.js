@@ -13,6 +13,13 @@
   return computerMove;
 }
 
+// for updating the score
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  loses: 0,
+  ties: 0
+};
+
 // to get player move, comepare it with the computer's move and get results
 function getResult(playerMove){
   // putting the computer move function so the computer move can be accessed
@@ -53,7 +60,33 @@ function getResult(playerMove){
     }
   }
 
+
+  if (result === 'You Win'){
+    score.wins += 1;
+  }
+  else if(result === 'You Lose'){
+    score.loses += 1;
+  }
+  else if (result === 'Tie'){
+    score.ties += 1;
+  }
+
+  localStorage.setItem('score', JSON.stringify(score));
   // interacttivity with the DOM
   document.querySelector('.moves').innerHTML = `You played ${playerMove}, computer played ${computerMove}`;
+
   document.querySelector('.result').innerHTML = `${result}`;
+
+  document.querySelector('.score').innerHTML = `Wins: ${score.wins} Loses: ${score.loses} Ties: ${score.ties}`;
+  console.log(score);
+}
+
+// to reset the score
+function resetScore(){
+  score.wins = 0;
+  score.loses = 0;
+  score.ties = 0;
+
+  document.querySelector('.score').innerHTML = `Wins: ${score.wins} Loses: ${score.loses} Ties: ${score.ties}`;
+  console.log(score);
 }
