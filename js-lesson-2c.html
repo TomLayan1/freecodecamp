@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="js-lesson-2c.css">
+  <title>Document</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <h2>ROCK PAPER SCISSORS</h3>
+  <button class="move-btn" onclick="getResult('Rock')">
+    <img src="rpc-pics/rock-emoji.png" alt="rock emoji" class="move-icon">
+  </button>
+  <button class="move-btn" onclick="getResult('Paper')"
+  class="move-icon">
+  <img src="rpc-pics/paper-emoji.png" alt="paper emoji" class="move-icon">
+  </button>
+  <button class="move-btn" onclick="getResult('Scissors')" class="move-icon">
+    <img src="rpc-pics/scissors-emoji.png" alt="scissors emoji" class="move-icon">
+  </button>
+
+  <p class="moves"></p>
+  <p class="result"></p>
+  <p class="score"></p>
+
+  <button class="reset-btn" onclick="resetScore();
+  // you can either use the function or use the localStorage: by giving it a default value to reset the score 
+  localStorage.removeItem('score')">Reset Score</button>
+    <button class="js-autoplay-btn autoplay-btn" onclick="autoPlay()">Autoplay</button>
+
+  <script src="js-lesson-2c.js"></script>
+</body>
+</html>

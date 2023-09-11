@@ -1,9 +1,5 @@
  // For score
- let score = JSON.parse(localStorage.getItem('score')) || 
- {
-   wins: 0,
-   loses: 0
- };
+ let score = JSON.parse(localStorage.getItem('score')) || {wins: 0, loses: 0};
 
  // To get player move and compare with computer move to get result and scores
  function playGame(playerMove){

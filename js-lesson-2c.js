@@ -20,6 +20,25 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   ties: 0
 };
 
+// to autoplay the game
+let isAutoPlay = false;
+let intervalId;
+function autoPlay() {
+  if (!isAutoPlay){
+    intervalId = setInterval(() => {
+    // we save computer move in the a variable so the player move can
+    // select random numbers
+      const playerMove = getComputerMove();
+      getResult(playerMove);
+    }, 1000)
+    isAutoPlay = true;
+  }
+  else{
+    clearInterval(intervalId);
+    isAutoPlay = false;
+  }
+}
+
 // to get player move, comepare it with the computer's move and get results
 function getResult(playerMove){
   // putting the computer move function so the computer move can be accessed
@@ -73,7 +92,10 @@ function getResult(playerMove){
 
   localStorage.setItem('score', JSON.stringify(score));
   // interacttivity with the DOM
-  document.querySelector('.moves').innerHTML = `You played ${playerMove}, computer played ${computerMove}`;
+  document.querySelector('.moves').innerHTML = `you
+  <img src="rpc-pics/${playerMove}-emoji.png" class="move-icon">
+  <img src="rpc-pics/${computerMove}-emoji.png" class="move-icon">
+  Computer`;
 
   document.querySelector('.result').innerHTML = `${result}`;
 

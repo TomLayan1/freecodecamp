@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .is-subscribed{
+      background-color: black;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <input type="text" class="js-text-input" placeholder="Type here" onkeyup="showText()">
+  <p class="js-output-text"></p>
+  <button class="js-btn" onclick="clickSubscribeBtn()">Subscribe</button>
+  <script>
+
+    function clickSubscribeBtn(){
+      let subscrribeBtn = document.querySelector('.js-btn');
+
+      if (subscrribeBtn.innerHTML === 'Subscribe'){
+        subscrribeBtn.innerHTML = 'Subscribed';
+        subscrribeBtn.classList.add('is-subscribed');
+      }
+      else{
+        subscrribeBtn.innerHTML = 'Subscribe';
+        subscrribeBtn.classList.remove('is-subscribed');      
+      } 
+    }
+
+    function showText(){
+      let inputElement = document.querySelector('.js-text-input');
+      let inputText = inputElement.value;
+
+      document.querySelector('.js-output-text').innerHTML = `${inputText}`;
+
+      console.log(inputText);
+    }
+  </script>
+</body>
+</html>

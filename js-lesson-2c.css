@@ -1,0 +1,35 @@
+*{
+  box-sizing: border-box;
+  background-color: black;
+  padding: 0 1%;
+}
+p, h2{
+  color: white;
+  margin-bottom: 30px;
+}
+
+.move-btn{
+  border-radius: 100%;
+  background-color: black;
+  border: 2px solid white;
+  padding: 2%;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.move-icon{
+  width: 50px;
+  height: 50px;
+}
+.reset-btn,
+.autoplay-btn{
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.result{
+  font-size: 2rem;
+}
