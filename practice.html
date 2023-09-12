@@ -4,34 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .js-confirm-div{
+      display: flex;
+      background-color: white;
+      width: 30%;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-   <p>Amazon Shipping Calculator</p>
-   <p>Orders under $40 = + $10 shipping</p>
-   <p>Orders over $40 = FREE shipping</p>
-   <input class="js-input" placeholder="Cost of order" onkeydown="enterShippingCost(event)">
-   <button class="js-btn" onclick="calculateCost()">Calculate</button>
-  <p class="js-output"></p>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop watch</title>
+  <style>
+   
+  </style>
+</head>
+<body>
+ 
   <script>
+    
+    // function confirmReset(){
+    //   let showConfirmation = document.querySelector('.js-confirm-div');
+    //   let confirmHTML = `
+    //   <p>Are you sure you want to reset score?</p>
+    // <button>Yes</button>
+    // <button>No</button>
+    //   `;
+    //   showConfirmation.innerHTML = confirmHTML;
+    // }
 
-    function calculateCost(){
-      let inputElement = document.querySelector('.js-input');
-      let cost = inputElement.value;
+    // function showAddedt(){
+    //   let addedText = document.querySelector('.js-added-output')
+    //     addedText.innerHTML = 'Added';
+    //     if (addedText.innerHTML === 'Added'){
+    //       setTimeout(() => {
+    //         addedText.innerHTML = '';
+    //       },2000)
+    //     }
+    // }
 
-      if (cost < 40){
-        cost = ((cost * 100) + 1000) / 100;
-        document.querySelector('.js-output').innerHTML = `Shipping cost: $${cost}`;
-      }
-      else if (cost >= 40){
-        document.querySelector('.js-output').innerHTML = `Shipping cost: $${cost}`;
-      }
-    }
+    // function changeButtonText() {
+    //   let startButton = document.querySelector('.js-start-btn');
+    //   startButton.innerHTML = 'Loading...';
 
-    function enterShippingCost(event){
-      if (event.key === 'Enter'){
-        calculateCost();
-      }
-    }
+    //   if (startButton.innerHTML === 'Loading...'){
+    //     setTimeout(() =>{
+    //       startButton.innerHTML = 'Finished';
+    //     }, 1000)
+    //   }
+    // }
   </script>
-</body>
+  </body>
 </html>

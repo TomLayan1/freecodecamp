@@ -1,5 +1,72 @@
- // for getting random computer move
- function getComputerMove(){
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r'){
+    getResult('Rock');
+  }
+  else if (event.key === 'p'){
+    getResult('Paper');
+  }
+  else if (event.key === 's'){
+    getResult('Scissors');
+  }
+  else if (event.key === 'a'){
+    autoPlay();
+  }
+  else if (event.key === 'Backspace'){
+    confirmReset();
+  }
+})
+
+// to confirm whether you want to reset score or not
+function confirmReset(){
+  document.querySelector('.js-confirm-div').innerHTML = `
+  <p class="confirm-text">Are you sure you want to reset the score?</p>
+  <button class="js-confirm-yes reset-confirm-btn">Yes</button>
+  <button class="js-confirm-no reset-confirm-btn">No</button>
+  `;
+
+  document.querySelector('.js-confirm-yes').addEventListener('click', () => {
+    resetScore();
+    hideConfirmMessage();
+  });
+  document.querySelector('.js-confirm-no').addEventListener('click', () => {
+    hideConfirmMessage();
+  })
+}
+
+
+function hideConfirmMessage(){
+  document.querySelector('.js-confirm-div').innerHTML = '';
+}
+
+// to autoplay the game
+let isAutoPlay = false;
+let intervalId;
+function autoPlay() {
+  if (!isAutoPlay){
+    intervalId = setInterval(() => {
+    // we save computer move in the a variable so the player move can
+    // select random numbers
+      const playerMove = getComputerMove();
+      getResult(playerMove);
+    }, 1000)
+    isAutoPlay = true;
+  }
+  else{
+    clearInterval(intervalId);
+    isAutoPlay = false;
+  }
+
+  let autoPlayText = document.querySelector('.js-autoplay-btn');
+  if (autoPlayText.innerHTML === 'Autoplay'){
+    autoPlayText.innerHTML = 'Stop Playing';
+  }
+  else{
+    autoPlayText.innerHTML = 'Autoplay';
+  }
+}
+
+// for getting random computer move
+function getComputerMove(){
   let getRandomNumber = Math.random();
   let computerMove = '';
   if (getRandomNumber >= 0 && getRandomNumber < 1 / 3){
@@ -19,25 +86,6 @@ let score = JSON.parse(localStorage.getItem('score')) || {
   loses: 0,
   ties: 0
 };
-
-// to autoplay the game
-let isAutoPlay = false;
-let intervalId;
-function autoPlay() {
-  if (!isAutoPlay){
-    intervalId = setInterval(() => {
-    // we save computer move in the a variable so the player move can
-    // select random numbers
-      const playerMove = getComputerMove();
-      getResult(playerMove);
-    }, 1000)
-    isAutoPlay = true;
-  }
-  else{
-    clearInterval(intervalId);
-    isAutoPlay = false;
-  }
-}
 
 // to get player move, comepare it with the computer's move and get results
 function getResult(playerMove){

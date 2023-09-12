@@ -33,3 +33,22 @@ p, h2{
 .result{
   font-size: 2rem;
 }
+
+.confirm-reset-div{
+  width: 28%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 0;
+}
+.confirm-text{
+  margin: 0;
+  color: white;
+}
+.reset-confirm-btn{
+  background-color: white;
+  padding: 2%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
