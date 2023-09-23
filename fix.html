@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fix.css">
+  <title>shopit</title>
+  
+</head>
+<body>
+  <select id="select-value">
+    <option class="js-quantity-number" value="1">1</option>
+    <option class="js-quantity-number" value="2">2</option>
+    <option class="js-quantity-number" value="3">3</option>
+    <option class="js-quantity-number" value="4">4</option>
+  </select>
+
+  <p class="js-output"></p>
+  <button class="js-btn">Get value</button>
+
+  <script>
+    const button = document.querySelector('.js-btn');
+    button.addEventListener('click',(button) => {
+      console.log('The code is working');
+      const selectElement = document.getElementById('#select-value');
+      outputElement = document.querySelector('.js-output')
+      outputElement.textContent = selectElement.value;
+      console.log(outputElement)
+    });
+  </script>
+  <!-- <div class="product-list">
+    <div class="product-container">
+      <div class="product-image-container">
+        <img class="product-image" src="selling1.png">
+      </div>
+      <div class="product-info-container">
+        <p class="product-info">Iphone 11 - 6.1" - 128GB ROM, 4GB RAM</p>
+      </div>
+      <div class="star-rating-container">
+        <img class="star-img" src="star50.png">
+        <p class="js-rating rating">87</p>
+      </div>
+      <div class="price-quantity-container">
+        <p class="js-product-price product-price">$0.00</p>
+        <select class="quantity-list" id="quantity-list">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="color-container">
+        <button class="color-btn">Red</button>
+        <button class="color-btn">Brown</button>
+        <button class="color-btn">Black</button>
+      </div>
+      <div class="size-container">
+        <button class="size-btn">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+      </div>
+      <div class="add-button-container">
+        <button class="add-cart-btn" onclick="addCartQuantity()">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-container">
+      <div class="product-image-container">
+        <img class="product-image" src="selling1.png">
+      </div>
+      <div class="product-info-container">
+        <p class="product-info">Iphone 11 - 6.1" - 128GB ROM, 4GB RAM</p>
+      </div>
+      <div class="star-rating-container">
+        <img class="star-img" src="star50.png">
+        <p class="js-rating rating">87</p>
+      </div>
+      <div class="price-quantity-container">
+        <p class="js-product-price product-price">$0.00</p>
+        <select class="quantity-list" id="quantity-list">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="add-button-container">
+        <button class="add-cart-btn" onclick="addCartQuantity()">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-image-container">
+          <img class="product-image" src="selling1.png">
+        </div>
+        <div class="product-info-container">
+          <p class="product-info">Iphone 11 - 6.1" - 128GB ROM, 4GB RAM</p>
+        </div>
+        <div class="star-rating-container">
+          <img class="star-img" src="star50.png">
+          <p class="js-rating rating">87</p>
+        </div>
+        <div class="price-quantity-container">
+          <p class="js-product-price product-price">$0.00</p>
+          <select class="quantity-list" id="quantity-list">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="add-button-container">
+          <button class="add-cart-btn" onclick="addCartQuantity()">ADD TO CART</button>
+        </div>
+    </div>
+  </div> -->
+</body>
+</html>

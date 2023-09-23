@@ -1,0 +1,135 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(222, 220, 220);
+}
+.product-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 100%;
+  margin-top: 50px;
+  /* place-items: center; */
+  align-items: normal;
+}
+.product-container{
+  background-color: white;
+  width: 100%;
+  height: auto;
+  padding: 8px 4px 3px 4px;
+  border-radius: 7px;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+.product-image-container{
+  width: 80%;
+  height: 40%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.product-image{
+  width: 100%;
+  height: 100%;
+}
+.product-info-container{
+  width: 100%;
+  /* height: 100%; */
+  padding: 0 7px;
+  margin-bottom:10px;
+}
+.product-info{
+  margin: 0;
+  text-align: center;
+}
+.star-rating-container{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.star-img{
+  width: 75%;
+}
+.rating{
+  width: 15%;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+.price-quantity-container{
+  width: 60%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.product-price{
+  font-size: 1.3rem;
+  margin: 0;
+}
+.quantity-list{
+  width: 40px;
+  height: 25px;
+  border: 1px solid rgb(182, 178, 178);
+  background-color: rgb(232, 226, 226);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-button-container{
+  width: 70%;
+  /* height: 100%; */
+  overflow: hidden;
+  margin: 0 auto;
+}
+.add-cart-btn{
+  width: 100%;
+  height: 33px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transform: translatex(100%);
+  transition: 0.5s;
+}
+.product-container:hover
+.add-cart-btn{
+  transform: translateY(0%);
+  visibility: visible;
+}
+.product-container:hover{
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  width: 101%;
+}
+.color-container,
+.size-container{
+  width: 90%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  /* margin-left: 5px; */
+  margin-bottom: 10px;
+}
+.color-container{
+  margin-top: 15px;
+}
+.color-btn,
+.size-btn{
+  width: 50px;
+  height: 25px;
+  padding: 5px 6px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
