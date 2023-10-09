@@ -30,11 +30,9 @@
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   gap: 1%;
-  /* border: 1px solid green; */
   border-radius: 5px;
   width: 80%;
   margin: 1% auto;
-  /* padding: 1% 0; */
 }
 .quiz-btn{
   padding: 1% 3%;
