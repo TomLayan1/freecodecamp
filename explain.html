@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" class="age-input">
+  <button onclick="giveDiscount ()">Click Here</button>
+  <p class="output-text"></p>
+  <script>
+    function giveDiscount (){
+      const inputField =  document.querySelector('.age-input');
+      const value = inputField.value;
+
+      let output = document.querySelector('.output-text');
+
+      if(value < 18){
+        output.innerHTML = `You get a discount`
+      }
+      else if (value > 18){
+        output.innerHTML = `You don't get a discount`;
+      }
+    }
+
+
+  </script>
+</body>
+</html>
