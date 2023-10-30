@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="signup.css">
+  <title>Sign up</title>
+</head>
+<body>
+  <div id="header">
+    <div class="logo-container">
+      <h2 class="logo">Logo</h2>
+      <img class="logo" src="" alt="">
+    </div>
+    <div class="nav-container">
+      <a class="nav-link" href=""><li>Home</li></a>
+      <a class="nav-link" href=""><li>Lorem</li></a>
+      <a class="nav-link" href=""><li>Lorem</li></a>
+      <a class="nav-link" href=""><li>Lorem</li></a>
+      <a class="nav-link" href=""><li>What we do</li></a>
+      <a class="nav-link" href=""><li>Lorem</li></a>
+    </div>
+    <div class="menu-icon">
+      <button class="take-quiz-btn">Take quiz</button>
+      <img class="nav-icon" src="hamburger.png" alt="">
+    </div>
+  </div>
+    <div class="js-signup-registering-container signup-registering-container">
+      <div class="form-container">
+        <h2 style="padding: 22px 0 0 0; text-align: center;">Create Account</h2>
+        <form class="form">
+          <div class="input-container">
+            <label class="input-label">Username</label>
+            <input class="js-signup-username input-field" id="username" type="text" placeholder="Enter your name here">
+            <small class="username-error-message" style="color: red; padding-top: 1px; "></small>
+          </div>
+          <div class="input-container">
+            <label class="input-label">Email</label>
+            <input class="js-email-field input-field" id="email" type="email" placeholder="Enter your email here">
+            <small class="email-error-message" style="color: red; padding-top: 1px; "></small>
+          </div>
+          <div class="input-container">
+            <label class="input-label">Password</label>
+            <input class="js-password-field input-field" id="password-signup" type="password" placeholder="Enter Password">
+            <small class="password-error-message" style="color: red; padding-top: 1px; "></small>
+          </div>
+          <div class="input-container">
+            <label class="input-label">Confirm Password</label>
+            <input class="js-passwordcheck-field input-field" id="password-check" type="password" placeholder="Re-enter Password">
+            <small class="password-check-error-message" style="color: red; padding-top: 1px; "></small>
+          </div>
+          <button class="js-sigup-form-btn form-sign-btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="script/signup.js"></script>
+</body>
+</html>
