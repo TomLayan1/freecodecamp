@@ -137,6 +137,7 @@ li{
 .click-to-signup{
   font-weight: bold;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 

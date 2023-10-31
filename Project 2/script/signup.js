@@ -1,4 +1,4 @@
-// signup form validation
+// SIGNUP VALIDATION
 const signupUsername = document.querySelector('.js-signup-username');
 
 const signupEmail = document.querySelector('.js-email-field');
@@ -18,6 +18,7 @@ let registeredUsers = JSON.parse(localStorage.getItem('registeredUsers'));
 if (!registeredUsers){
   registeredUsers = [];
 }
+console.log('do you see me');
 console.log(registeredUsers);
 // let registeredUsers = [];
 
@@ -82,3 +83,5 @@ function validation(){
   };
   localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
 }
+
+// export default registeredUsers;
