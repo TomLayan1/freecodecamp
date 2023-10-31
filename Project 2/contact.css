@@ -1,0 +1,494 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+.main{
+  background-color: white;
+  height: 100vh;
+  border-bottom-left-radius: 250px;
+  border-bottom-right-radius: 250px;
+  box-shadow:5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+#header{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(41, 41, 109);
+  padding: 15px 0;
+  margin-top: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: fixed;
+  z-index: 1000;
+  box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+.logo-container{
+ width: 8%;
+ padding-left: 15px;
+}
+.logo{
+  color: white;
+}
+.nav-container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 55%;
+}
+.nav-link{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+  color: white;
+}
+.menu-icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+  width: 20%;
+}
+.take-quiz-btn{
+  padding: 6px 15px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.take-quiz-btn:hover{
+  background-color: white;
+  color: rgb(41, 41, 109);
+}
+.nav-icon{
+  width: 15%;
+  display: none;
+}
+
+/* for form header */
+.form-header{
+  text-align: center;
+  padding-top: 8.5%;
+}
+
+/* for contact form genral container */
+.form-social-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 20px;
+}
+
+/* for image */
+.lotti-image-container{
+  /* background-color: pink; */
+  width: 45%;
+  padding: 15px;
+}
+.placeholder-img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* for form */
+.contact-form-main-container{
+  display: flex;
+  width: 55%;
+}
+.form-container{
+  width: 80%;
+  box-shadow: 0 0 5px 5px rgba(41, 41, 109, 0.5) inset;
+}
+.contact-form{
+  width: 100%;
+  padding: 16px;
+}
+.field-container{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+label{
+  color: rgb(41, 41, 109);
+  font-size: 14px;
+  padding: 1px;
+}
+.input-field{
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(41, 41, 109);
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+}
+.error-message{
+  color: red;
+  padding-left: 1px;
+}
+.message-field{
+  width: 100%;
+  height: 100px;
+  border: 2px solid rgb(41, 41, 109);
+  background-color: transparent;
+  color: black;
+  border-radius: 5px;
+  text-align: top;
+}
+.send-message-btn{
+  width: 50%;
+  padding: 8px 0;
+  border: 2px solid rgb(41, 41, 109);
+  border-radius: 5px;
+  background-color: rgb(41, 41, 109);
+  color: white;
+  font-weight: bold;
+  margin: 1px 25%;
+  transition: 0.3s ease-in-out;
+}
+.send-message-btn:hover{
+  background-color: white;
+  color: rgb(41, 41, 109);
+}
+/* for social media icons */
+.social-icon-container{
+  width: 20%;
+  align-self: flex-end;
+  padding: 5px;
+}
+.social-icon{
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+.bxl-twitter, .bxl-facebook-circle, .bxl-instagram-alt, .bxl-linkedin-square{
+  color: rgb(41, 41, 109);
+  font-size: 30px;
+  cursor: pointer;
+}
+.icon-name{
+  color: rgb(41, 41, 109);
+  margin-left: 1px;
+}
+.social-icon .icon-name{
+  visibility: hidden;
+  transition: 0.1s;
+}
+.social-icon:hover .icon-name{
+  visibility: visible;
+}
+/* for mobile devices */
+@media only screen and (max-width: 480px){
+  .main{
+    background-color: white;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow:5px 5px 8px rgba(0, 0, 0, 0.8);
+  }
+  #header{
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
+  }
+  .nav-container{
+    position: absolute;
+    top: 60px;
+    background-color: blue;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+  .nav-link{
+    margin-bottom: 20px;
+  }
+  li{
+    text-align: center;
+  }
+  .menu-icon{
+    width: 35%;
+    justify-content: space-evenly;
+  }
+  .nav-icon{
+    display: block;
+  }
+
+  /* for form header */
+  .form-header{
+    text-align: center;
+    padding-top: 30%;
+  }
+    /* for contact form genral container */
+  .form-social-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* for image */
+  .lotti-image-container{
+    display: none;
+  }
+
+  /* for form */
+  .contact-form-main-container{
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+  .form-container{
+    width: 100%;
+    box-shadow: 0 0 5px 5px rgba(41, 41, 109, 0.5) inset;
+  }
+  .contact-form{
+    width: 100%;
+    padding: 16px;
+  }
+  .field-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  label{
+    color: rgb(41, 41, 109);
+    font-size: 14px;
+    padding: 1px;
+  }
+  .input-field{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(41, 41, 109);
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+  }
+  .error-message{
+    color: red;
+    padding-left: 1px;
+  }
+  .message-field{
+    width: 100%;
+    height: 100px;
+    border: 2px solid rgb(41, 41, 109);
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+    text-align: top;
+  }
+  .send-message-btn{
+    width: 50%;
+    padding: 8px 0;
+    border: 2px solid rgb(41, 41, 109);
+    border-radius: 5px;
+    background-color: rgb(41, 41, 109);
+    color: white;
+    font-weight: bold;
+    margin: 1px 25%;
+    transition: 0.3s ease-in-out;
+  }
+  .send-message-btn:hover{
+    background-color: white;
+    color: rgb(41, 41, 109);
+  }
+  /* for social media icons */
+  .social-icon-container{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
+  .social-icon{
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-icon .icon-name{
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 920px){
+  .main{
+    background-color: white;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow:5px 5px 8px rgba(0, 0, 0, 0.8);
+  }
+  #header{
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
+  }
+  .nav-container{
+    position: absolute;
+    top: 60px;
+    background-color: blue;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+  .nav-link{
+    margin-bottom: 20px;
+  }
+  li{
+    text-align: center;
+  }
+  .menu-icon{
+    width: 35%;
+    justify-content: space-evenly;
+  }
+  .nav-icon{
+    display: block;
+  }
+
+  /* for form header */
+  .form-header{
+    text-align: center;
+    padding-top: 30%;
+  }
+    /* for contact form genral container */
+  .form-social-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  /* for image */
+  .lotti-image-container{
+    display: none;
+  }
+
+  /* for form */
+  .contact-form-main-container{
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+  }
+  .form-container{
+    width: 100%;
+    box-shadow: 0 0 5px 5px rgba(41, 41, 109, 0.5) inset;
+  }
+  .contact-form{
+    width: 100%;
+    padding: 16px;
+  }
+  .field-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+  }
+  label{
+    color: rgb(41, 41, 109);
+    font-size: 14px;
+    padding: 1px;
+  }
+  .input-field{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(41, 41, 109);
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+  }
+  .error-message{
+    color: red;
+    padding-left: 1px;
+  }
+  .message-field{
+    width: 100%;
+    height: 100px;
+    border: 2px solid rgb(41, 41, 109);
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+    text-align: top;
+  }
+  .send-message-btn{
+    width: 50%;
+    padding: 8px 0;
+    border: 2px solid rgb(41, 41, 109);
+    border-radius: 5px;
+    background-color: rgb(41, 41, 109);
+    color: white;
+    font-weight: bold;
+    margin: 1px 25%;
+    transition: 0.3s ease-in-out;
+  }
+  .send-message-btn:hover{
+    background-color: white;
+    color: rgb(41, 41, 109);
+  }
+  /* for social media icons */
+  .social-icon-container{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
+  .social-icon{
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-icon .icon-name{
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width: 1190px){
+  .main{
+    background-color: white;
+    height: 97vh;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow:5px 5px 8px rgba(0, 0, 0, 0.8);
+  }
+  #header{
+    width: 100%;
+    margin: 0;
+    margin-top: 0;
+  }
+  .nav-container{
+    position: absolute;
+    top: 60px;
+    background-color: blue;
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+    padding-top: 12px;
+  }
+  .nav-link{
+    margin-bottom: 20px;
+  }
+  li{
+    text-align: center;
+  }
+  .menu-icon{
+    width: 35%;
+    justify-content: space-evenly;
+  }
+  .nav-icon{
+    display: block;
+  }
+/* for form header
+.form-header{
+  text-align: center;
+  padding: 12% 0 1% 0;
+} */
+
+/* for contact form genral container */
+.form-social-container{
+  width: 100%;
+
+} 
+
+}
