@@ -83,5 +83,3 @@ function validation(){
   };
   localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
 }
-
-// export default registeredUsers;
