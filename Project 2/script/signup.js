@@ -18,7 +18,6 @@ let registeredUsers = JSON.parse(localStorage.getItem('registeredUsers'));
 if (!registeredUsers){
   registeredUsers = [];
 }
-console.log('do you see me');
 console.log(registeredUsers);
 // let registeredUsers = [];
 

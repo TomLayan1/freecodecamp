@@ -3,7 +3,7 @@ let registeredUsers = JSON.parse(localStorage.getItem('registeredUsers'));
 if (!registeredUsers){
   registeredUsers = [];
 }
-
+console.log(registeredUsers);
 // LOGIN VALIDATION
 let loginErrorMessage = document.querySelector('.js-login-error-message');
 
