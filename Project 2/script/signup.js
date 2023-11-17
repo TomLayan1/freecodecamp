@@ -78,7 +78,7 @@ function validation(){
       password: signupPasswordValue
     });
     alert('Account creation successful');
-    console.log(registeredUsers);
+    window.location.href = '/login.html'
   };
   localStorage.setItem('registeredUsers', JSON.stringify(registeredUsers));
 }
