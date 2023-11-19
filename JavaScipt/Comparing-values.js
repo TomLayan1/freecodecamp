@@ -1,5 +1,5 @@
 const a = 20;
-const b = 30;
+const b = '20';
 
 function comparevalues(a, b){
   if(a === b)
