@@ -3,6 +3,6 @@ class Vegetable {
     this.name = name;
   }
 }
-
 const carrot = new Vegetable('carrot');
 console.log(carrot.name);
+
