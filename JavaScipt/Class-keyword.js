@@ -5,4 +5,3 @@ class Vegetable {
 }
 const carrot = new Vegetable('carrot');
 console.log(carrot.name);
-
