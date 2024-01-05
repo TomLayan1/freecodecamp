@@ -5,4 +5,3 @@ let myNestedArray = [
   ['mutate', 1327.98, 'splice', 'slice', 'push', [['deeper']]],
   ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth', [[['deepest']]]]
 ];
-Creating complex multi-dimensional arrays
