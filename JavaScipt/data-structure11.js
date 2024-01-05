@@ -10,5 +10,3 @@ let userActivity = {
 userActivity.data.online = 45;
 
 console.log(userActivity);
-
-Modify an Object Nested Within an Object
