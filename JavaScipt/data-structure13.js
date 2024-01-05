@@ -7,8 +7,8 @@ let foods = {
   strawberries: 27
 };
 
-function checkInventory(scannedItem) {
-  return foods[scannedItem];
-}
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
 
-console.log(checkInventory("apples"));
+console.log(foods);
