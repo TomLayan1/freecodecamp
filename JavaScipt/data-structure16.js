@@ -22,5 +22,3 @@ function getArrayOfUsers(obj) {
 }
 
 console.log(getArrayOfUsers(users));
-
-Generate an Array of All Object Keys with Object.keys()
