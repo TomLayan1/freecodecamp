@@ -13,5 +13,3 @@ foods[berry] = 27;
 // Only change code above this line
 
 console.log(foods);
-
-Add Key-Value Pairs to JavaScript Objects
