@@ -27,5 +27,3 @@ function isEveryoneHere(userObj) {
 }
 
 console.log(isEveryoneHere(users));
-
-Check if an Object has a Property
