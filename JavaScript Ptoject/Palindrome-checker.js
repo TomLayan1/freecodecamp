@@ -10,12 +10,13 @@ button.addEventListener('click', () => {
 function palindrome(str) {
   const fixedString = str.replace(/\W+|_/g, '').toLowerCase();
   const result = fixedString.split('').reverse().join('');
-  console.log(fixedString, result);
   if (fixedString === result) {
    output.innerHTML = str + ' is a palindrome';
   } else {
    output.innerHTML = str + ' is not a palindrome';
   }
-}
 
-// console.log(palindrome("result"));
+  if (str === '') {
+    alert('Please input a value');
+  }
+}
