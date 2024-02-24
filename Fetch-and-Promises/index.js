@@ -27,5 +27,9 @@ console.error(`There was an error: ${err}`);
 // For the second parameter, pass in index.
 // This will represent the position of each author, and will be useful for pagination later.
 const displayAuthors = (authors) => {
-  authors.forEach(({ author, image, url, bio }, index)=> {});
+  authors.forEach(({ author, image, url, bio }, index)=> {
+
+    //use the compound assignment operator (+=) to append an empty template literal to the innerHTML of authorContainer.
+    authorContainer.innerHTML += ``;
+  });
 }
