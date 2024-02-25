@@ -14,11 +14,13 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 .then((res) => res.json())
 // chaining another .then() method for the callback function
 .then((data) => {
-// To see the authors' names on the page, you need to call the displayAuthors function inside the second .then() method.
-// But before that, you need to assign the author data to the empty authorDataArr array.
-
-// First, assign data to the authorDataArr variable.
+  // To see the authors' names on the page, you need to call the displayAuthors function inside the second .then() method.
+  // But before that, you need to assign the author data to the empty authorDataArr array.
+  // First, assign data to the authorDataArr variable.
   authorDataArr = data;
+
+  // Call the displayAuthors function with the authorDataArr array and .slice(). Use the startingIndex variable for the starting point and the endingIndex variable for the ending point.
+  displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 })
 // using the .catch() method to handle errors
 .catch((err) => {
@@ -35,8 +37,9 @@ const displayAuthors = (authors) => {
 
     //use the compound assignment operator (+=) to append an empty template literal to the innerHTML of authorContainer.
     authorContainer.innerHTML += `
-      <div id="${index}" class="user-card"></div>
+      <div id="${index}" class="user-card">
         <h2 class="author-name">${author}</h2>
+      </div>
     `;
   });
 }
