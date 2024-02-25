@@ -30,6 +30,8 @@ const displayAuthors = (authors) => {
   authors.forEach(({ author, image, url, bio }, index)=> {
 
     //use the compound assignment operator (+=) to append an empty template literal to the innerHTML of authorContainer.
-    authorContainer.innerHTML += ``;
+    authorContainer.innerHTML += `
+      <div id="${index}" class="user-card"></div>
+    `;
   });
 }
