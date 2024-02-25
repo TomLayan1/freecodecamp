@@ -42,6 +42,7 @@ const displayAuthors = (authors) => {
         <h2 class="author-name">${author}</h2>
         <img class="user-img" alt="${author} avatar" src="${image}">
         <p class="bio">${bio}</p>
+        <a class="author-link" href="${url}" target="_blank">${author}'s author page</a>
       </div>
     `;
   });
