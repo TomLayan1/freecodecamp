@@ -41,6 +41,8 @@ const fetchMoreAuthors = () => {
   if (displayAuthors.length <= endingIndex) {
     // disabled button
     loadMoreBtn.disabled = true;
+    // change cursor to not allowed
+    loadMoreBtn.style.cursor = 'not-allowed';
     // change button text
     loadMoreBtn.innerText = 'No more data to load';
   }
