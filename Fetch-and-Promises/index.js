@@ -19,7 +19,8 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
   // First, assign data to the authorDataArr variable.
   authorDataArr = data;
 
-  // Call the displayAuthors function with the authorDataArr array and .slice(). Use the startingIndex variable for the starting point and the endingIndex variable for the ending point.
+  // Call the displayAuthors function with the authorDataArr array and .slice().
+  // Using the startingIndex variable for the starting point and the endingIndex variable for the ending point.
   displayAuthors(authorDataArr.slice(startingIndex, endingIndex));
 })
 // using the .catch() method to handle errors
@@ -39,6 +40,7 @@ const displayAuthors = (authors) => {
     authorContainer.innerHTML += `
       <div id="${index}" class="user-card">
         <h2 class="author-name">${author}</h2>
+        <img class="user-img" alt="${author} avatar" src="${image}" >
       </div>
     `;
   });
