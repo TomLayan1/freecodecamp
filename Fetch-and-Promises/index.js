@@ -28,6 +28,22 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 console.error(`There was an error: ${err}`);
 })
 
+// To get more authors when the fetch more authors button is ckicked
+const fetchMoreAuthors = () => {
+  startingIndex += 8;
+  endingIndex += 8;
+  
+  // When there are no more content to show, disable the button and change botton text
+  // This can be achieved using an if statement
+
+  // if condition is met
+  if (displayAuthors.length <= endingIndex) {
+    // disabled button
+    loadMoreBtn.disabled = true;
+    // change button text
+    loadMoreBtn.innerText = 'No more data to load';
+  }
+};
 // Pass an empty callback function to the .forEach() method.
 // For the first parameter of the callback, destructure the author, image, url, and bio items.
 
@@ -47,3 +63,6 @@ const displayAuthors = (authors) => {
     `;
   });
 }
+
+// add click event lsitener to the loadMoreBtn that runs the fetchMoreAuthors function 
+loadMoreBtn.addEventListener('click', fetchMoreAuthors);
