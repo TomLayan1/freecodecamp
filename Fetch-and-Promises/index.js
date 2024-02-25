@@ -32,6 +32,7 @@ const displayAuthors = (authors) => {
     //use the compound assignment operator (+=) to append an empty template literal to the innerHTML of authorContainer.
     authorContainer.innerHTML += `
       <div id="${index}" class="user-card"></div>
+        <h2 class="author-name">${author}</h2>
     `;
   });
 }
