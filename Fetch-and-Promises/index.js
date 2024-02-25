@@ -25,7 +25,8 @@ fetch("https://cdn.freecodecamp.org/curriculum/news-author-page/authors.json")
 })
 // using the .catch() method to handle errors
 .catch((err) => {
-console.error(`There was an error: ${err}`);
+  // To display an error message if an error occurs in loading the authors
+  authorContainer.innerHTML = `<p class="error-msg">There was an error loading the authors</p>`;
 })
 
 // To get more authors when the fetch more authors button is ckicked
