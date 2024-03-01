@@ -12,9 +12,12 @@ const fetchData = async () => {
     // Use the await keyword to handle the asynchronous nature of the fetch() method
     const res = await fetch(forumLatest);
     const data = await res.json()
-    // log the data to the console
-    console.log(data);
   } catch (err) {}
 };
 // call the fetchData function to log the data
 fetchData();
+
+// To dislay the data, we start by creating an arrow function which takes in a data parameter
+const showLatestPosts = (data) => {
+
+}
