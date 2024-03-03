@@ -27,4 +27,9 @@ const showLatestPosts = (data) => {
 
   // Destructure the topics array from the topic_list object.
   const { topics } = topic_list;
+
+  // Call the map() method on your topics array. For the callback function, use an empty arrow function that takes item as a parameter.
+  // Then assign the result of the map() method to postsContainer.innerHTML.
+
+  postsContainer.innerHTML = topics.map((items) => {});
 }
