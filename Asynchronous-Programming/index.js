@@ -24,4 +24,7 @@ fetchData();
 const showLatestPosts = (data) => {
   // use destructuring to get the topic_list and users properties from the data object.
   const { topic_list, users } = data;
+
+  // Destructure the topics array from the topic_list object.
+  const { topics } = topic_list;
 }
