@@ -32,4 +32,7 @@ const showLatestPosts = (data) => {
   // Then assign the result of the map() method to postsContainer.innerHTML.
 
   postsContainer.innerHTML = topics.map((items) => {});
+
+  // Inside the map method, destructure the following properties from the item object.
+  const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = items;
 }
