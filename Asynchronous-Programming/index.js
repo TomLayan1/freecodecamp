@@ -6,6 +6,40 @@ const avatarUrl = 'https://sea1.discourse-cdn.com/freecodecamp';
 
 const postsContainer = document.getElementById('posts-container');
 
+// 
+const timeAgo = (time) => {
+  const currentTime = new Date();
+  const lastPost = new Date(time);
+  const timeDifference = currentTime - lastPost;
+  const msPerMinute = 1000 * 60;
+  const minutesAgo = Math.floor(timeDifference / msPerMinute);
+  const hoursAgo = Math.floor(minutesAgo / 60);
+  const daysAgo = Math.floor(hoursAgo / 24);
+
+  if (minutesAgo < 60) {
+    return `${minutesAgo}m ago`;
+  }
+
+  if (hoursAgo < 24) {
+    return `${hoursAgo}h ago`;
+  }
+
+  return `${daysAgo}d ago`;
+};
+
+// A function to convert view counts to a more readable format.
+// For example, if the view count is 1000, it should display as 1k
+const viewCount = (views) => {
+  const thousands = Math.floor(views / 1000);
+
+  // check if views is greater or equal to 1000
+  if (views >= 1000) {
+    return `${thousands}k`
+  }
+
+  return views
+};
+
 // To populate the forum leaderboard with data, you will need to request the data from an API
 const fetchData = async () => { 
   try{
@@ -30,9 +64,26 @@ const showLatestPosts = (data) => {
 
   // Call the map() method on your topics array. For the callback function, use an empty arrow function that takes item as a parameter.
   // Then assign the result of the map() method to postsContainer.innerHTML.
-
-  postsContainer.innerHTML = topics.map((items) => {});
+  postsContainer.innerHTML = topics.map((items) => {
 
   // Inside the map method, destructure the following properties from the item object.
   const { id, title, views, posts_count, slug, posters, category_id, bumped_at } = items;
+
+  return `
+    <tr>
+      <td>
+        <p class="post-title">${title}</p>
+      </td>
+      <td></td>
+      <td>
+        ${posts_count - 1}
+      </td>
+      <td>
+        ${viewCount(views)}
+      </td>
+      <td>
+        ${timeAgo(bumped_at)}
+      </td>
+    </tr>`;
+  }).join('');
 }
