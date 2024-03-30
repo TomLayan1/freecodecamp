@@ -5,19 +5,31 @@ class Counter extends Component {
     count: 0,
     tags: ['tag1', 'tag2', 'tag3']
   }
+
+  renderTags() {
+    // Using conditional statements
+    if (this.state.tags.length === 0) return <p>There are no tags!</p>
+    return <ul>
+            {/* using the map method. NOTE: Each of the tags must have a unique key */}
+            {this.state.tags.map(tags => <li key={tags}>{ tags }</li>)}
+      </ul>
+  }
+
   render() { 
     return (
       <div>
         <p>{this.formatCount()}</p>
         <button>Increment</button>
-        <un>
-          {this.state.tags.map(tags => <li>{ tags }</li>)}
-        </un>
+        {/* if the condition is true, it renders the truthy value which is after && */}
+        {this.state.tags.length === 0 && 'Please create a new tag!'}
+        {/* call the renderTags method in here */}
+        {this.renderTags()}
       </div>
     );
   }
 
   formatCount() {
+    // 
     const {count} = this.state;
     return count === 0 ? '0' : count;
   }
