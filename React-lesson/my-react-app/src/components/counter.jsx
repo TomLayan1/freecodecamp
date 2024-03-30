@@ -2,20 +2,24 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = {
-    count: 0
+    count: 0,
+    tags: ['tag1', 'tag2', 'tag3']
   }
   render() { 
     return (
-      <React.Fragment>
+      <div>
         <p>{this.formatCount()}</p>
         <button>Increment</button>
-      </React.Fragment>
+        <un>
+          {this.state.tags.map(tags => <li>{ tags }</li>)}
+        </un>
+      </div>
     );
   }
 
   formatCount() {
     const {count} = this.state;
-    return count === 0 ? 'Zero' : count;
+    return count === 0 ? '0' : count;
   }
 }
  
