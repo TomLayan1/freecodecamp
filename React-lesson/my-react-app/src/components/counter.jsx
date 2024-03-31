@@ -15,11 +15,15 @@ class Counter extends Component {
       </ul>
   }
 
+  // Event handler
+  handleIncrement = () => {
+    console.log('Increament clicked', this);
+  }
   render() { 
     return (
       <div>
         <p>{this.formatCount()}</p>
-        <button>Increment</button>
+        <button onClick={this.handleIncrement}>Increment</button>
         {/* if the condition is true, it renders the truthy value which is after && */}
         {this.state.tags.length === 0 && 'Please create a new tag!'}
         {/* call the renderTags method in here */}
@@ -36,3 +40,5 @@ class Counter extends Component {
 }
  
 export default Counter;
+
+// handling events and building event handlers
