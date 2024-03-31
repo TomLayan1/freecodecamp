@@ -18,7 +18,9 @@ class Counter extends Component {
   // Event handler
   // Best with arrow functions
   handleIncrement = () => {
-    console.log('Increament clicked', this);
+    // In react we do not modify the state directly
+    // That is, we can't do this this.state.count++
+    this.setState({ count: this.state.count +1 });
   }
   render() { 
     return (
