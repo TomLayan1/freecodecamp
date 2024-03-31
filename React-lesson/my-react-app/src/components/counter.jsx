@@ -16,6 +16,7 @@ class Counter extends Component {
   }
 
   // Event handler
+  // Best with arrow functions
   handleIncrement = () => {
     console.log('Increament clicked', this);
   }
@@ -40,5 +41,3 @@ class Counter extends Component {
 }
  
 export default Counter;
-
-// handling events and building event handlers
