@@ -17,16 +17,27 @@ class Counter extends Component {
 
   // Event handler
   // Best with arrow functions
-  handleIncrement = () => {
+  handleIncrement = (product) => {
     // In react we do not modify the state directly
     // That is, we can't do this this.state.count++
     this.setState({ count: this.state.count +1 });
-  }
+    console.log(product);
+  };
+
+  doHandleIncrement = () => {
+    this.handleIncrement({ id: 1});
+  };
+  
   render() { 
     return (
       <div>
         <p>{this.formatCount()}</p>
-        <button onClick={this.handleIncrement}>Increment</button>
+        <button 
+        onClick={this.doHandleIncrement}
+        // it's best practice to use inline function when passing arguments
+        // like this: onClick{() => this.handleIncrement(product)}
+        >Increment</button>
+
         {/* if the condition is true, it renders the truthy value which is after && */}
         {this.state.tags.length === 0 && 'Please create a new tag!'}
         {/* call the renderTags method in here */}
