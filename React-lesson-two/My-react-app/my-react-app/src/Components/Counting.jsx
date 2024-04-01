@@ -4,7 +4,7 @@ import Counters from './Counters.jsx';
 class counting extends Component {
   state = {
     counter: [
-      {id: 1, value: 0},
+      {id: 1, value: 4},
       {id: 2, value: 0},
       {id: 3, value: 0},
       {id: 4, value: 0}
@@ -12,7 +12,7 @@ class counting extends Component {
   };
 
   mapCounters() {
-    return this.state.counter.map(counter => <Counters key = {counter.id}/>)
+    return this.state.counter.map(counter => <Counters key={counter.id} value={counter.value} />)
   }
   render() { 
     return (

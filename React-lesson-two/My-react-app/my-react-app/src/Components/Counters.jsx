@@ -2,35 +2,31 @@ import React, { Component } from 'react';
 
 class counters extends Component {
   state = {
-    count: 0
+    vaule: this.props.value
   }
 
   formatCount() {
-    const {count} = this.state
-    return count === 0 ? 'Zero' : count
+    const {vaule} = this.state
+    return vaule === 0 ? 'Zero' : vaule
   }
 
-  handleIncrement = (product) => {
-    this.setState({ count: this.state.count +1 })
+  handleIncrement = () => {
+    this.setState({ vaule: this.state.vaule +1 })
 
-  };
-
-  dohandleIncrement = () => {
-    this.handleIncrement({id: 1})
   };
 
   notify() {
-    if (this.state.count >  0 ) return <p>Count has been increased {this.state.count} {this.pluralise()}</p>
+    if (this.state.vaule >  0 ) return <p>Count has been increased {this.state.vaule} {this.pluralise()}</p>
   }
   pluralise() {
-    return this.state.count > 1 ? 'times' : 'time'
+    return this.state.vaule > 1 ? 'times' : 'time'
   }
 
   render() { 
     return (
       <div>
         <span>{this.formatCount()}</span>
-        <button onClick={this.dohandleIncrement}>Increment</button>
+        <button onClick={this.handleIncrement}>Increment</button>
         {this.notify()}
       </div>
     );
