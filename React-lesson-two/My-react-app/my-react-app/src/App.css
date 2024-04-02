@@ -38,6 +38,10 @@
 }
 
 span{
-  color: red;
+  color: blue;
   margin-right: 30px;
+}
+
+button{
+  margin-right: 20px;
 }
