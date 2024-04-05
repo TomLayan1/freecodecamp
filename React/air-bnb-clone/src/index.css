@@ -10,12 +10,33 @@ body {
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.249);
+  background-color: rgba(255, 255, 255, 0.791);
   width: 80%;
   height: 80px;
   display: flex;
-  margin: 30px auto;
   padding: 0 35px;
   border-radius: 50px;
-  border: 1px solid rgb(235, 62, 91);
+  position: fixed;
+  margin: 40px;
+  left: 6.5%;
+}
+.logo{
+  cursor: pointer;
+}
+
+.home{
+  background-color: rgba(244, 7, 46, 0.926);
+  width: 100%;
+  padding: 250px 20px 230px 20px;
+  border-bottom-left-radius: 700px;
+  border-bottom-right-radius: 700px;
+}
+.home-title{
+  margin: 0 0 40px 0;
+  text-align: center;
+  color: white;
+}
+.sub-title{
+  text-align: center;
+  color: white;
 }
