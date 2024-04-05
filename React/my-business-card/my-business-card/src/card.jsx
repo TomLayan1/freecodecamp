@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import photo from './photo.jpg';
+import 'boxicons/css/boxicons.min.css';
 
 function Image() {
   return (
-    <div>
-      <img src={photo} alt=""/>
+    <div className="img-bx">
+      <img src={photo} alt="User photo"/>
     </div>
   )
 };
 
 function NameAndButton() {
   return (
-    <div>
-      <h2 className="name">Laura Smith</h2>
-      <p className="Job">Frontend Developer</p>
+    <div className="name-btn-bx">
+      <h3 className="name">Laura Smith</h3>
+      <p className="job">Frontend Developer</p>
       <div className="btn-bx">
-        <button>Email</button>
-        <button>LinkedIn</button>
+        <button className="email">Email</button>
+        <button className="linkedin">LinkedIn</button>
       </div>
     </div>
   )
@@ -25,12 +26,24 @@ function NameAndButton() {
 function Body() {
   return (
     <div className="body-bx">
-      <h2 className="title"></h2>
-      <h2 className="title"></h2>
+      <h3 className="title">About</h3>
+      <p className="content">Japan’s Mt. Fuji is an active volcano about 100 kilometers southwest of Tokyo. Commonly called “Fuji-san,” it’s the country’s tallest peak, at 3,776 meters.</p>
+      <h3 className="title">Interest</h3>
+      <p className="content">Japan’s Mt. Fuji is an active volcano about 100 kilometers southwest of Tokyo. Commonly called “Fuji-san,” it’s the country’s tallest peak, at 3,776 meters.</p>
     </div>
   )
 };
 
+function Footer() {
+  return (
+    <div className="footer">
+      <i className='bx bxl-twitter' ></i>
+      <i className='bx bxl-facebook-square'></i>
+      <i className='bx bxl-instagram-alt'></i>
+      <i className='bx bxl-github'></i>
+    </div>
+  )
+}
 
 class Page extends Component {
   state = {  } 
@@ -39,6 +52,8 @@ class Page extends Component {
       <div className="card-bx-general">
         <Image />
         <NameAndButton />
+        <Body />
+        <Footer />
       </div>
     );
   }
