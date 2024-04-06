@@ -8,6 +8,10 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
 }
+p{
+  margin: 0;
+  font-size: 15px;
+}
 
 .header {
   background-color: rgba(255, 255, 255, 0.791);
@@ -19,13 +23,14 @@ body {
   position: fixed;
   margin: 40px;
   left: 6.5%;
+  z-index: 1000;
 }
 .logo{
   cursor: pointer;
 }
 
 .home{
-  background-color: rgba(244, 7, 46, 0.926);
+  background-color: rgba(251, 42, 77, 0.926);
   width: 100%;
   padding: 250px 20px 230px 20px;
   border-bottom-left-radius: 700px;
@@ -39,4 +44,56 @@ body {
 .sub-title{
   text-align: center;
   color: white;
+}
+
+/* CARD */
+.card-section{
+  width: 100%;
+  padding: 60px;
+}
+
+.card-bx-main{
+  width: 19%;
+}
+.img-bx{
+  width: 100%;
+  position: relative;
+}
+.item-img{
+  max-width: 234px;
+}
+.sold-out{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background-color: white;
+  padding: 3px;
+  font-size: 14px;
+}
+.others-bx{
+  width: 100%;
+  padding: 0 6px;
+}
+.star-bx{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px 0;
+  margin-bottom: 3px;
+}
+.star{
+  width: 20px;
+  margin-right: 5px;
+}
+.rate-country{
+  margin: 0;
+}
+.location{
+  color: rgb(144, 140, 140);
+}
+.item-name, .price{
+  line-height: 1.7;
+}
+.price-start{
+  color: rgb(144, 140, 140);
 }
