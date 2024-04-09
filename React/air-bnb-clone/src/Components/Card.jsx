@@ -1,56 +1,28 @@
 import React, { Component } from 'react';
-import itemImg from '../images/swimmer-image.png';
 import star from '../images/pink-star.png';
+import itemImg from '../images/swimmerImage.png';
 
+function CreateCard(props) {
+  console.log(props)
+  let itemImage = '../images/swimmerImage.png'
 
-function CreateCard() {
   return (
-    <section className='card-section'>
+    // <section className='card-section'>
       <div className='card-bx-main'>
         <div className='img-bx'>
-          <img className='item-img' src={itemImg}/>
-          <p className='sold-out'>SOLD OUT</p>
+          <img className='item-img' src={itemImg} alt='Item image'/>
+          <p className='sold-out'>{props.soldOut}</p>
         </div>
         <div className='others-bx'>
           <div className='star-bx'>
             <img className='star' src={star}/>
-            <p className='rate-country'>5.0 <span className='location'>(6).USA</span></p>
+            <p className='rate-country'>{props.rating} <span className='location'>{props.reviewCount}.{props.country}</span></p>
           </div>
-          <p className='item-name'>Life lessons with Katie Zaferes</p>
-          <p className='price'><span className='price-start'>From $136</span> / person</p>
+          <p className='item-name'>{props.title}</p>
+          <p className='price'><span className='price-start'>From ${props.price}</span> / person</p>
         </div>
       </div>
-
-      <div className='card-bx-main'>
-        <div className='img-bx'>
-          <img className='item-img' src={itemImg}/>
-          <p className='sold-out'>SOLD OUT</p>
-        </div>
-        <div className='others-bx'>
-          <div className='star-bx'>
-            <img className='star' src={star}/>
-            <p className='rate-country'>5.0 <span className='location'>(6).USA</span></p>
-          </div>
-          <p className='item-name'>Life lessons with Katie Zaferes</p>
-          <p className='price'><span className='price-start'>From $136</span> / person</p>
-        </div>
-      </div>
-
-      <div className='card-bx-main'>
-        <div className='img-bx'>
-          <img className='item-img' src={itemImg}/>
-          <p className='sold-out'>SOLD OUT</p>
-        </div>
-        <div className='others-bx'>
-          <div className='star-bx'>
-            <img className='star' src={star}/>
-            <p className='rate-country'>5.0 <span className='location'>(6).USA</span></p>
-          </div>
-          <p className='item-name'>Life lessons with Katie Zaferes</p>
-          <p className='price'><span className='price-start'>From $136</span> / person</p>
-        </div>
-      </div>
-    </section>
+    // </section>
   );
 }
 
@@ -58,7 +30,36 @@ class Card extends Component {
   state = {  } 
   render() { 
     return (
-      < CreateCard />
+      <section className='card-section'>
+        < CreateCard
+          img='../images/swimmer-image.png'
+          soldOut = 'SOLD OUT'
+          rating= "5.0"
+          reviewCount = {6}
+          country = 'USA'
+          title = 'Life lessons with Katie Zaferes'
+          price = {136}
+        />
+
+        < CreateCard
+          img='../images/swimmer-image.png'
+          soldOut = 'SOLD OUT'
+          rating= "5.0"
+          reviewCount = {6}
+          country = 'USA'
+          title = 'Life lessons with Katie Zaferes'
+          price = {136}
+        />
+        < CreateCard
+          img='../images/swimmer-image.png'
+          soldOut = 'SOLD OUT'
+          rating= "5.0"
+          reviewCount = {6}
+          country = 'USA'
+          title = 'Life lessons with Katie Zaferes'
+          price = {136}
+        />
+      </section>
     );
   }
 }
