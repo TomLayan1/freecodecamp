@@ -10,9 +10,9 @@ const data = [
             rating: 5.0,
             reviewCount: 6
         },
-        location: "USA",
+        location: "Online",
         openSpots: 0,
-        soldOut: "SOLDOUT"
+        country: "USA"
     },
     {
         id: 2,
@@ -24,9 +24,9 @@ const data = [
             rating: 5.0,
             reviewCount: 30
         },
-        location: "USA",
+        location: "Online",
         openSpots: 27,
-        soldOut: "SOLDOUT"
+        country: "USA"
     },
     {
         id: 3,
@@ -40,7 +40,7 @@ const data = [
         },
         location: "Norway",
         openSpots: 3,
-        soldOut: ""
+        country: "USA"
     }
 ]
 

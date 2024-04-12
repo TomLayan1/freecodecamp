@@ -12,13 +12,18 @@ const App = () => {
       <Card
         // Always have a key to pass a unique thing about the item which in this case is the id. Therefore key: {item.id}
         key = {item.id}
-        img = {item.coverImg}
-        soldOut = {item.soldOut}
-        rating= {item.stats.rating}
-        reviewCount = {item.stats.reviewCount}
-        country = {item.location}
-        title = {item.title}
-        price = {136}
+
+        // img = {item.coverImg}
+        // openSpot = {item.openSpots}
+        // rating= {item.stats.rating}
+        // reviewCount = {item.stats.reviewCount}
+        // country = {item.country}
+        // title = {item.title}
+        // price = {item.price}
+        // location = {item.location}
+
+        // Destructure the data item to be more simplified
+        item = {item}
       />
     )
 
