@@ -1,0 +1,47 @@
+.hero-main{
+  width: 100%;
+  padding: 0 36px;
+}
+.field-btn-bx{
+  width: 100%;
+  height: 140px;
+  padding: 28px 0;
+  margin-bottom: 29px;
+}
+.field-bx{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.input-bx{
+  width: 47%;
+  height: 55.1px;
+}
+.field-name{
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.input-field{
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid rgb(185, 181, 181);
+  border-radius: 5px;
+}
+button{
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to right, rgb(65, 5, 65), rgb(143, 7, 143));
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.img-bx{
+  width: 100%;
+  height: 268px;
+  max-width: 100%;
+  max-height: 268px;
+  display: flex;
+  justify-content: center;
+}
