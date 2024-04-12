@@ -2,6 +2,15 @@ import React from 'react'
 import './Hero.css'
 
 const Hero = () => {
+
+  const handleClicks = () => {
+    console.log('I was clicked');
+  }
+
+  const handleMouseOver = () => {
+    console.log('Mouse is hovering')
+  }
+
   return (
     <div className='hero-main'>
       <div className='field-btn-bx'>
@@ -15,9 +24,9 @@ const Hero = () => {
             <input type='text' placeholder='And take my money' className='input-field' />
           </div>
         </div>
-        <button>Get a new meme image</button>
+        <button onClick={handleClicks}>Get a new meme image</button>
       </div>
-      <div className='img-bx'>
+      <div onMouseOver={handleMouseOver} className='img-bx'>
         <h2></h2>
         <img src={require('../../Assets/meme-image.png')} />
         <h2></h2>
