@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './Components/Header';
+import Body from './Components/Body';
+import Card from './Components/Card'
+import data from './data';
 
-function App() {
+const App = () => {
+  // Create a variable to create a new array of what the map object returns
+  // map the imported data to create instances of each item so the can be used in JSX
+  const card = data.map((item) => {
+    return (
+      <Card
+        // Always have a key to pass a unique thing about the item which in this case is the id. Therefore key: {item.id}
+        key = {item.id}
+        img = {item.coverImg}
+        soldOut = {item.soldOut}
+        rating= {item.stats.rating}
+        reviewCount = {item.stats.reviewCount}
+        country = {item.location}
+        title = {item.title}
+        price = {136}
+      />
+    )
+
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Body />
+      <section className='card-section'>
+        {/* Call the variable in this instance {card} */}
+        { card }
+      </section>
     </div>
-  );
+  )
 }
 
 export default App;
