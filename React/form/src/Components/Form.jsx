@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
+import './form.css'
 
 const Form = () => {
   // Use state to hold any data typed in any input to maintain up to date state for every change that happens in any field in our form
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    email: ''
+    email: '',
+    comment: ''
   })
   console.log(formData);
 
@@ -21,9 +23,10 @@ const Form = () => {
   return (
     <div>
       <form action='' method='' id=''>
-        <input type='text' name='firstName' placeholder='First Name' onChange={handleChange}/>
-        <input type='text' name='lastName' placeholder='Last Name' onChange={handleChange}/>
-        <input type='email' name='email' placeholder='Enter Email Here' onChange={handleChange}/>
+        <input type='text' name='firstName' placeholder='First Name' value={formData.firstName} onChange={handleChange}/>
+        <input type='text' name='lastName' placeholder='Last Name' value={formData.lastName} onChange={handleChange}/>
+        <input type='email' name='email' placeholder='Enter Email Here' value={formData.email} onChange={handleChange}/>
+        <textarea name='comment' placeholder='Comment' value={formData.comment} onChange={handleChange}/>
       </form>
     </div>
   )
