@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Hero.css'
 import holder from '../../Assets/meme-image.png'
 import memeData from '../../MemeData'
@@ -6,36 +6,61 @@ import memeData from '../../MemeData'
 
 const Hero = () => {
 
-  const [imageUrl, setImageUrl] = React.useState('')
+  const [imageUrl, setImageUrl] = useState('')
+
+  const [meme, setMeme] = useState({
+    topText: '',
+    bottomText: '',
+    randomImage: ''
+  })
+
+  const [allMemeImages, setAllMemeImages] = useState(memeData);
 
   const getMeme = () => {
-    const memeArray = memeData.data.memes;
+    const memeArray = allMemeImages.data.memes;
     const randomNumber = Math.floor(Math.random() * memeArray.length);
-    console.log(randomNumber);
-
-    setImageUrl(memeArray[randomNumber].url);
+    const url = memeArray[randomNumber].url;
+    setMeme(prevMeme => ({ ...prevMeme, randomImage: url }));
   }
 
+  const handleChange = (event) => {
+
+    // destructure structure the field attributes and set them = event.target
+    const {name, value} = event.target;
+
+    // pass a parameter to refers to the previous value of the state object
+    // so you can get access to the current or previous value of the object
+    setMeme(prevMemeData => {
+      // return an object that returns the previous value of the state object and the changes made to specific properties
+      // use the ternary operator to choose if the field will use a checked or value to get the changes made
+      return {...prevMemeData, [name]: value}
+    })
+  }
+
+  const handleSubmit = (event) => {
+    // to prevent the page from reloading or refreshing:
+    event.preventDefault();
+  }
 
   return (
     <div className='hero-main'>
-      <div className='field-btn-bx'>
+      <form className='field-btn-bx' onSubmit={handleSubmit}>
         <div className='field-bx'>
           <div className='input-bx'>
-            <p className='field-name'>Top text</p>
-            <input type='text' placeholder='Shut up' className='input-field' />
+            <label className='field-name'>Top text</label>
+            <input type='text' name='topText' placeholder='Shut up' className='input-field' value={meme.topText} onChange={handleChange}/>
           </div>
           <div className='input-bx'>
-            <p className='field-name'>Bottom text</p>
-            <input type='text' placeholder='And take my money' className='input-field' />
+            <label className='field-name'>Bottom text</label>
+            <input type='text' name='bottomText' placeholder='And take my money' className='input-field' onChange={handleChange}/>
           </div>
         </div>
         <button onClick={getMeme}>Get a new meme image</button>
-      </div>
+      </form>
       <div className='img-bx'>
-        <h2>{}</h2>
-        <img src={imageUrl || holder} alt='meme'/>
-        <h2>{}</h2>
+        <h2 className='top-text'>{meme.topText}</h2>
+        <img src={meme.randomImage} alt='meme'/>
+        <h2 className='bottom-text'>{meme.bottomText}</h2>
       </div>
     </div>
   )

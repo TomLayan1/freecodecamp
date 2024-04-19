@@ -45,4 +45,25 @@ button{
   max-height: 268px;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+.img-bx .top-text, .bottom-text {
+  position: absolute;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 1000;
+  text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000;
+  text-transform: uppercase;
+  color: white;
+  
+}
+.img-bx .top-text{
+  top: 20px;
+}
+.img-bx .bottom-text {
+  bottom: 20px;
 }
