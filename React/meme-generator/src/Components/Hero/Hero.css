@@ -59,7 +59,9 @@ button{
     1px 1px 0 #000000;
   text-transform: uppercase;
   color: white;
-  
+  width: 470px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .img-bx .top-text{
   top: 20px;

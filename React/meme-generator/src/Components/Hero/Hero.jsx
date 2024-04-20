@@ -1,12 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Hero.css'
 import holder from '../../Assets/meme-image.png'
-import memeData from '../../MemeData'
+// import memeData from '../../MemeData'
 
 
 const Hero = () => {
-
-  const [imageUrl, setImageUrl] = useState('')
 
   const [meme, setMeme] = useState({
     topText: '',
@@ -14,10 +12,18 @@ const Hero = () => {
     randomImage: ''
   })
 
-  const [allMemeImages, setAllMemeImages] = useState(memeData);
+  const [allMemeData, setAllMemeData] = useState({});
+
+  useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes')
+    .then(res => res.json())
+    .then(data => setAllMemeData(data))
+  }, []);
+  // There's nothing changing in state that require making another API request
+  // So, the dependancy array above will be an empty array
 
   const getMeme = () => {
-    const memeArray = allMemeImages.data.memes;
+    const memeArray = allMemeData.data.memes;
     const randomNumber = Math.floor(Math.random() * memeArray.length);
     const url = memeArray[randomNumber].url;
     setMeme(prevMeme => ({ ...prevMeme, randomImage: url }));
@@ -59,7 +65,7 @@ const Hero = () => {
       </form>
       <div className='img-bx'>
         <h2 className='top-text'>{meme.topText}</h2>
-        <img src={meme.randomImage} alt='meme'/>
+        <img src={meme.randomImage || holder} alt='meme'/>
         <h2 className='bottom-text'>{meme.bottomText}</h2>
       </div>
     </div>
