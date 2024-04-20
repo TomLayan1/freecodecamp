@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Hero.css'
 import holder from '../../Assets/meme-image.png'
-// import memeData from '../../MemeData'
-
 
 const Hero = () => {
 
@@ -12,25 +10,24 @@ const Hero = () => {
     randomImage: ''
   })
 
-  const [allMemeData, setAllMemeData] = useState({});
+  const [allMemeData, setAllMemeData] = useState([]);
 
   useEffect(() => {
     fetch('https://api.imgflip.com/get_memes')
     .then(res => res.json())
-    .then(data => setAllMemeData(data))
+    .then(data => setAllMemeData(data.data.memes))
   }, []);
   // There's nothing changing in state that require making another API request
   // So, the dependancy array above will be an empty array
+  console.log(allMemeData)
 
   const getMeme = () => {
-    const memeArray = allMemeData.data.memes;
-    const randomNumber = Math.floor(Math.random() * memeArray.length);
-    const url = memeArray[randomNumber].url;
+    const randomNumber = Math.floor(Math.random() * allMemeData.length);
+    const url = allMemeData[randomNumber].url;
     setMeme(prevMeme => ({ ...prevMeme, randomImage: url }));
   }
 
   const handleChange = (event) => {
-
     // destructure structure the field attributes and set them = event.target
     const {name, value} = event.target;
 
