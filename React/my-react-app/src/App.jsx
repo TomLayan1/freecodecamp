@@ -9,7 +9,6 @@ const App = () => {
 
   const handleClick = () => {
     setMode(prevMode => !prevMode)
-    console.log(mode)
   }
   return (
     <>

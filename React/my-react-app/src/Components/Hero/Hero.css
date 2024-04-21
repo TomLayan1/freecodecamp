@@ -16,3 +16,9 @@ ul .fact-list::marker {
   font-size: 22px;
   color: rgb(0, 204, 255);
 }
+
+@media only screen and (max-width: 720px) {
+  .main-content {
+    padding: 25% 5%;
+  }
+}

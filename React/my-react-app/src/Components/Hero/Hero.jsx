@@ -8,7 +8,7 @@ const Hero = (props) => {
     transition: '1s'
   }
   const titleStyle = {
-    color: 'rgb(0, 204, 255)'
+    color: props.setMode ? 'black' : 'white'
   }
   return (
     <div className="main-content" style={heroStyle}>

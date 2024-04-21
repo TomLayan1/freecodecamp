@@ -7,7 +7,7 @@ const Header = (props) => {
     backgroundColor: props.setMode? 'black' : 'white'
   }
   const btnStyle = {
-    margin: props.setMode? '1px 1px 0 1px' : '1px 1px 0 10px'
+    margin: props.setMode? '0 0 0 2px' : '0 0 0 13px'
   }
   const headerStyle = {
     backgroundColor: props.setMode ? 'white' : 'black',
