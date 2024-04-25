@@ -2,12 +2,14 @@ import React from 'react'
 import './Dice.css'
 
 
-const Dice = (props) => {
-
+const Dice = ({value, isHeld, holdDice}) => {
+  const stylez = {
+    backgroundColor: isHeld ? 'green' : 'white'
+  }
 
 
   return (
-    <div className='dice'>{props.value}</div>
+    <div className='dice' style={stylez} onClick={holdDice}>{value}</div>
   )
 }
 

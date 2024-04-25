@@ -1,26 +1,50 @@
 import React, { useState } from 'react'
 import './App.css';
 import Dice from './Component/Dice';
+// install nanoid (npm install nanoid) to generate random numbers
+import { nanoid } from 'nanoid'
 
 const App = () => {
+  const generateNewDice = () => {
+    return {
+      // call the nanoid function as the id value 
+      id: nanoid(),
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false
+    }
+  }
 
   // Write a function that will generate 10 random number
   const allNewDIce = () => {
     let newDice = [];
     for(let i = 0; i < 10; i++) {
-      const randomNumber = Math.ceil(Math.random() * 6)
-      newDice.push(randomNumber);
+      newDice.push(generateNewDice());
     }
     return newDice;
   }
-  console.log(allNewDIce());
 
   // declare a state and set the state value as the allNewDice function
   const [newDice, setNewDice] = useState(allNewDIce());
 
-  const diceElement = newDice.map((diceNum, index) => {
+  const rollDice = () => {
+    setNewDice(prevDice => {
+      return prevDice.map(dice => {
+        return dice.isHeld ? dice : generateNewDice()
+      })
+    })
+  }
+
+  const holdDice = (id) => {
+    setNewDice(prev => {
+      return prev.map(dice => {
+        return dice.id === id ? {...dice, isHeld: !dice.isHeld} : dice
+      })
+    })
+  }
+
+  const diceElement = newDice.map((diceNum) => {
     return (
-      <Dice key={index} value={diceNum} />
+      <Dice key={diceNum.id} id={diceNum.id} value={diceNum.value} isHeld={diceNum.isHeld} holdDice={() => holdDice(diceNum.id)} />
     )
   })
 
@@ -33,7 +57,7 @@ const App = () => {
       <div className='dice-constainer'>
         {diceElement}
       </div>
-      <button>Roll</button>
+      <button onClick={rollDice}>Roll</button>
     </div>
   );
 }
